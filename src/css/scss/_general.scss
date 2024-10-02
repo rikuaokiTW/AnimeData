@@ -2,6 +2,7 @@
 $bkgd-blue: #2E51A2;
 $bkgd-gray: #DDDDDD;
 $white: #FFFFFF;
+$black: #000000;
 $emphasis: #DAA520;
 $text-blue: #172952;
 
@@ -13,4 +14,29 @@ body {
         $bkgd-gray 90deg 270deg,
         $bkgd-blue 270deg 360deg
     );
+    font-family: 'Verdana', 'sans-serif';
+}
+
+.emphasis {
+    color: $emphasis;
+}
+
+/* Mixins Úteis */
+
+@mixin flex-jbetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-jstart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }

@@ -1,0 +1,47 @@
+/* Configurações de títulos dos formulários */
+
+.field-title {
+    background-color: $white;
+    padding: 13px 16px;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.filter-title {
+    @include flex-jstart;
+    margin-left: 0.5rem;
+    h4 {
+        position: relative;
+    }
+    & h4::after {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(-0%, -50%);
+        content: '';
+        height: 2px;
+        width: 28rem;
+        margin-left: 0.5rem;
+        background-color: $text-blue;
+    }
+}
+
+/* Configurações gerais de forms */
+
+form {
+    background-color: $white;
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid black;
+    border-top: 0;
+    scrollbar-width: thin;
+    scrollbar-color: $bkgd-blue $bkgd-gray;
+}
+
+.filters form > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 28.125rem;
+}
