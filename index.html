@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAnimeList - FetchSeason</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="grid-12 offset-1">MyAnimeList</h1>
+            <h2 class="grid-12 offset-1">jikan.<span class="emphasis">fetchSeason</span></h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row forms">
+                <div class="grid-5 offset-1 fields">
+                    <div class="field-title">
+                        <h3>Campos</h3>
+                    </div>
+                    <form action="#">
+                        <div>
+                            <div>
+                                <input type="checkbox" name="mal-id" id="id-mal-id" value="mal-id">
+                                <span class="checkmark"></span>
+                                <label for="id-mal-id">MAL_ID</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="default-title" id="id-default-title" value="default-title">
+                                <span class="checkmark"></span>
+                                <label for="id-default-title">Título Padrão</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="titulo-ing" id="id-titulo-ing" value="titulo-ing">
+                                <span class="checkmark"></span>
+                                <label for="id-titulo-ing">Título ING</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="qntd-eps" id="id-qntd-eps" value="qntd-eps">
+                                <span class="checkmark"></span>
+                                <label for="id-qntd-eps">Qntd Episódios</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="estreia" id="id-estreia" value="estreia">
+                                <span class="checkmark"></span>
+                                <label for="id-estreia">Estréia</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="termino" id="id-termino" value="termino">
+                                <span class="checkmark"></span>
+                                <label for="id-termino">Término</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="temporada" id="id-temporada" value="temporada">
+                                <span class="checkmark"></span>
+                                <label for="id-temporada">Temporada</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="ano" id="id-ano" value="ano">
+                                <span class="checkmark"></span>
+                                <label for="id-ano">Ano</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="semana" id="id-semana" value="semana">
+                                <span class="checkmark"></span>
+                                <label for="id-semana">Dia da Semana</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="horario" id="id-horario" value="horario">
+                                <span class="checkmark"></span>
+                                <label for="id-horario">Horário</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="produtores" id="id-produtores" value="produtores">
+                                <span class="checkmark"></span>
+                                <label for="id-produtores">Produtores</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="distribuidores" id="id-distribuidores" value="distribuidores">
+                                <span class="checkmark"></span>
+                                <label for="id-distribuidores">Distribuidores</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="estudios" id="id-estudios" value="estudios">
+                                <span class="checkmark"></span>
+                                <label for="id-estudios">Estúdios</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="origem" id="id-origem" value="origem">
+                                <span class="checkmark"></span>
+                                <label for="id-origem">Origem</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="generos" id="id-generos" value="generos">
+                                <span class="checkmark"></span>
+                                <label for="id-generos">Gêneros</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="temas" id="id-temas" value="temas">
+                                <span class="checkmark"></span>
+                                <label for="id-temas">Temas</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="demografias" id="id-demografias" value="demografias">
+                                <span class="checkmark"></span>
+                                <label for="id-demografias">Demografias</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="duracao" id="id-duracao" value="duracao">
+                                <span class="checkmark"></span>
+                                <label for="id-duracao">Duração</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="nota" id="id-nota" value="nota">
+                                <span class="checkmark"></span>
+                                <label for="id-nota">Nota</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="qntd-aval" id="id-qntd-aval" value="qntd-aval">
+                                <span class="checkmark"></span>
+                                <label for="id-qntd-aval">Qntd Avaliações</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="etaria" id="id-etaria" value="etaria">
+                                <span class="checkmark"></span>
+                                <label for="id-etaria">Faixa-Etária</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="rank" id="id-rank" value="rank">
+                                <span class="checkmark"></span>
+                                <label for="id-rank">Rank</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="popularidade" id="id-popularidade" value="popularidade">
+                                <span class="checkmark"></span>
+                                <label for="id-popularidade">Popularidade</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="qntd-membros" id="id-qntd-membros" value="qntd-membros">
+                                <span class="checkmark"></span>
+                                <label for="id-qntd-membros">Qntd Membros</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                    </form>
+                </div>
+                <div class="grid-5 filters">
+                    <div class="field-title">
+                        <h3>Filtros</h3>
+                    </div>
+                    <form action="#">
+                        <div class="grid-12">
+                            <div class="grid-12 filter-title"> 
+                                <h4>Período</h4>
+                            </div>
+                            <div class="grid-12 range-container">
+                                <div class="form-control">
+                                    <div class="form-control-container">
+                                        <span
+                                        class="form-control-container-time"
+                                        >
+                                            DE
+                                        </span>
+                                        <input
+                                        class="form-control-container-time-input"
+                                        type="number"
+                                        id="fromInput"
+                                        value="1970"
+                                            min="1970"
+                                            max="2024"
+                                            >
+                                        </div>
+                                    <div class="form-control-container">
+                                        <span
+                                        class="form-control-container-time"
+                                        >
+                                            ATÉ
+                                        </span>
+                                        <input
+                                            class="form-control-container-time-input"
+                                            type="number"
+                                            id="toInput"
+                                            value="2024"
+                                            min="1970"
+                                            max="2024"
+                                            >
+                                        </div>
+                                </div>
+                                <div class="sliders-control">
+                                    <input id="fromSlider" type="range" value="1970" min="1970" max="2024">
+                                    <input id="toSlider" type="range" value="2024" min="1970" max="2024">
+                                </div>
+                            </div>
+                            <div class="grid-12 filter-title">
+                                <h4>Temporada</h4>
+                            </div>
+                            <div class="row">
+                                <div class="grid-3">
+                                    <input type="checkbox" name="todos" id="id-todos" value="todos">
+                                    <label for="id-todos">Todos</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="inverno" id="id-inverno" value="inverno">
+                                    <label for="id-inverno">Inverno</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="primavera" id="id-primavera" value="primavera">
+                                    <label for="id-primavera">Primavera</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="verao" id="id-verao" value="verao">
+                                    <label for="id-verao">Verão</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="outono" id="id-outono" value="outono">
+                                    <label for="id-outono">Outono</label>
+                                </div>
+                            </div>
+                            <div class="grid-12 filter-title">
+                                <h4>Tipo</h4>
+                            </div>
+                            <div class="row">
+                                <div class="grid-3">
+                                    <input type="checkbox" name="todos" id="id-todos" value="todos">
+                                    <label for="id-todos">Todos</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="tv" id="id-tv" value="tv">
+                                    <label for="id-tv">TV</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="movie" id="id-movie" value="movie">
+                                    <label for="id-movie">Movie</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="ova" id="id-ova" value="ova">
+                                    <label for="id-ova">OVA</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="ona" id="id-ona" value="ona">
+                                    <label for="id-ona">ONA</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="music" id="id-music" value="music">
+                                    <label for="id-music">Music</label>
+                                </div>
+                            </div>
+                            <div class="grid-12 filter-title">
+                                <h4>Status</h4>
+                            </div>
+                            <div class="row">
+                                <div class="grid-3">
+                                    <input type="checkbox" name="todos" id="id-todos" value="todos">
+                                    <label for="id-todos">Todos</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="finalizado" id="id-finalizado" value="finalizado">
+                                    <label for="id-finalizado">Finalizado</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="exibicao" id="id-exibicao" value="exibicao">
+                                    <label for="id-exibicao">Em Exibição</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="exibido" id="id-exibido" value="exibido">
+                                    <label for="id-exibido">Não Exibido</label>
+                                </div>
+                            </div>
+                            <div class="grid-12 filter-title">
+                                <h4>Faixa-Etária</h4>
+                            </div>
+                            <div class="row">
+                                <div class="grid-3">
+                                    <input type="checkbox" name="todos" id="id-todos" value="todos">
+                                    <label for="id-todos">Todos</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="g" id="id-g" value="g">
+                                    <label for="id-g">G</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="pg" id="id-pg" value="pg">
+                                    <label for="id-pg">PG</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="pg-13" id="id-pg-13" value="pg-13">
+                                    <label for="id-pg-13">PG-13</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="r-17" id="id-r-17" value="r-17">
+                                    <label for="id-r-17">R-17+</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="r" id="id-r" value="r">
+                                    <label for="id-r">R+</label>
+                                </div>
+                                <div class="grid-3">
+                                    <input type="checkbox" name="rx" id="id-rx" value="rx">
+                                    <label for="id-rx">Rx</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="grid-11 offset-1 button">
+                <button>GERAR</button>
+            </div>
+            <div class="grid-10 offset-1 file-output">
+                <div class="grid-12 field-title">
+                    <h3>Arquivo .csv:</h3>
+                </div>
+                <div class="grid-12">
+                    <div class="file">
+                        <p class="file-placeholder">Gere seu arquivo utilizando as opções acima</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./animeInfo.js"></script>
+</body>
+</html>

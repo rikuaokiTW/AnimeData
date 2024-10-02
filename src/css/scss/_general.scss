@@ -1,0 +1,16 @@
+/* Variáveis */
+$bkgd-blue: #2E51A2;
+$bkgd-gray: #DDDDDD;
+$white: #FFFFFF;
+$emphasis: #DAA520;
+$text-blue: #172952;
+
+/* Configurações Gerais */
+body {
+    padding: 2.5rem 0;
+    background: conic-gradient(
+        $bkgd-blue 0deg 90deg,
+        $bkgd-gray 90deg 270deg,
+        $bkgd-blue 270deg 360deg
+    );
+}

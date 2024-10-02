@@ -1,0 +1,77 @@
+-------------------------------------
+META CAMPOS/FILTROS
+-------------------------------------
+Escopo de Busca - Período
+Filtro: Intervalo de Anos
+
+Escopo de Busca - Temporada
+Filtro: All | winter | spring | summer | fall
+
+-------------------------------------
+CAMPOS/FILTROS DE DADOS
+-------------------------------------
+Título ENG
+Título JAP/Romanji
+Campos: Titulo ENG, Titulo Romanji/Padrão
+
+Type (TV)
+Campo: Tipo (TV | MOVIE | OVA | ONA | MUSIC)
+Filtro: All | TV | MOVIE | OVA | ONA | MUSIC
+
+Episodes (Number)
+Campo: Qntd de Episodios
+
+Status
+Filtro: All | Já Finalizado (Finished Airing) | Em Exibição (Currently Airing) | Não exibido ainda (Not yet Aired)
+
+Aired (período de exibição)
+Campos: Estreia | Termino
+
+Premiered (spring 2023)
+Campos: Temporada | Ano
+
+Broadcast (Wednesdays at 23:00 JST)
+Campos: Dia da Semana | Horario (JST)
+
+Producers
+Campos: Produtores
+
+Licensors
+Campos: Distribuidores
+
+Studios
+Campos: Estudios
+
+Source (Manga)
+Campos: Origem
+
+Genres
+Campos: Generos
+
+Themes
+Campos: Temas
+
+Demographic
+Campos: Demografias
+
+Duration (per ep)
+Campos: Duração 
+
+Rating (PG-13)
+Campos: Faixa-Etaria
+Filtro: ALL | G - All Ages | PG - Childdren | PG-13 - Teens 13 or older | R - 17+ (violence & profanity) | R+ - Mild Nudity | Rx - Hentai
+
+Score
+Campos: Nota | Qntd Avaliações
+
+Ranked (not yet aired | R18+ not included)
+Campos: Rank
+
+Popularity
+Campos: Popularidade
+
+Members
+Campos: Qntd de Membros
+
+Favorites
+Campos: Favoritado por
