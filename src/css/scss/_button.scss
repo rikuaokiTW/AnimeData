@@ -1,0 +1,13 @@
+.button {
+    @include flex-center;
+    padding: 50px 0;
+    button {
+        padding: 12px 52px;
+        background-color: $bkgd-blue;
+        border: 0;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $white;
+    }
+}

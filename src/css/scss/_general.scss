@@ -17,6 +17,10 @@ body {
     font-family: 'Verdana', 'sans-serif';
 }
 
+header {
+    margin-bottom: 54px;
+}
+
 .emphasis {
     color: $emphasis;
 }
@@ -39,4 +43,11 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

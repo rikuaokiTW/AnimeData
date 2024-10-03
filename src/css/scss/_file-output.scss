@@ -1,0 +1,12 @@
+.file-output div:last-child {
+    height: 144px;
+    background-color: $white;
+    .file {
+        @include flex-center;
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgba(23, 41, 82, .4);
+        }
+    }
+}
