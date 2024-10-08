@@ -3,10 +3,87 @@
     background-color: $white;
     .file {
         @include flex-center;
-        p {
+        position: relative;
+        .file-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
             font-size: 24px;
             font-weight: bold;
             color: rgba(23, 41, 82, .4);
         }
+        .file-loader {
+            @include flex-center-column;
+            display: none;
+            .loader {
+                height: 50px;
+                width: 50px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 8px solid $bkgd-blue;
+                animation:
+                l20-1 0.8s infinite linear alternate,
+                l20-2 1.6s infinite linear;
+            }
+            p {
+                margin-top: 8px;
+                font-size: 12px;
+                font-weight: bold;
+                opacity: 0.8;
+            }
+            p span {
+                color: $bkgd-blue;
+            }
+        }
+        .real-file {
+            @include flex-center;
+            display: none;
+            height: fit-content;
+            a {
+                @include flex-jbetween;
+                cursor: pointer;
+                background-color: $bkgd-gray;
+                width: 12.75rem;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 20px;
+                div.icon-name {
+                    @include flex-center;
+                }
+                p {
+                    color: $black;
+                    font-size: 1.25rem;
+                }
+                img {
+                    height: 32px;
+                    width: 32px;
+                }
+                img:last-child {
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+        }
     }
+}
+
+/* ANIMAÇÕES */
+
+@keyframes l20-1{
+    0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+    12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+    25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+    50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+    62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+    75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+    100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+
+@keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
 }
