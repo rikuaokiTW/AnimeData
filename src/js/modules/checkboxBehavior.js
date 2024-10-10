@@ -1,10 +1,7 @@
+import { isCheckbox } from "./typeguards.js";
 export default function initCheckboxBehavior() {
     const fieldCheckboxes = document.querySelectorAll('.fields [type="checkbox"]');
     const filterCheckboxes = document.querySelectorAll('.filters [type="checkbox"]');
-    function isCheckbox(value) {
-        return value instanceof HTMLInputElement;
-    }
-    ;
     if (fieldCheckboxes && filterCheckboxes) {
         function checkedBgColor() {
             fieldCheckboxes.forEach(checkbox => {

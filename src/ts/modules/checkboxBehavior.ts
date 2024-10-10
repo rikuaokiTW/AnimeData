@@ -1,11 +1,8 @@
+import { isCheckbox } from "./typeguards.js";
+
 export default function initCheckboxBehavior() {
     const fieldCheckboxes = document.querySelectorAll('.fields [type="checkbox"]');
     const filterCheckboxes = document.querySelectorAll('.filters [type="checkbox"]');
-
-    // TYPE GUARD PARA HTMLINPUT, AQUI ESPECIFICAMENTE CHECKBOXES
-    function isCheckbox(value: unknown): value is HTMLInputElement {
-        return value instanceof HTMLInputElement;
-    };
 
     if(fieldCheckboxes && filterCheckboxes) {
         // MUDA A COR DE FUNDO DA DIV PAI DA CHECKBOX

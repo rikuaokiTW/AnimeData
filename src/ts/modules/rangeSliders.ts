@@ -1,3 +1,5 @@
+import { isInput } from "./typeguards.js";
+
 export default function initRangeSlider() {
     const sliderOne = document.querySelector("#fromSlider");
     const sliderTwo = document.querySelector("#toSlider");
@@ -6,10 +8,6 @@ export default function initRangeSlider() {
     const sliderTrack = document.querySelector(".slider-track");
     const minGap = 0;
     const maxInput = new Date().getFullYear();
-    
-    function isInput(value: unknown): value is HTMLInputElement {
-        return value instanceof HTMLInputElement;
-    };
 
     if(sliderOne && sliderTwo && inputOne && inputTwo && sliderTrack) {
         // RETORNA UMA LISTA COM OS ANOS POSSÍVEIS DENTRO DO INTERVALO ESTABELECIDO

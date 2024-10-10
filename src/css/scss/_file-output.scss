@@ -45,7 +45,7 @@
                 @include flex-jbetween;
                 cursor: pointer;
                 background-color: $bkgd-gray;
-                width: 12.75rem;
+                width: fit-content;
                 padding: 10px 20px;
                 text-decoration: none;
                 border-radius: 20px;
@@ -63,6 +63,7 @@
                 img:last-child {
                     height: 24px;
                     width: 24px;
+                    margin-left: 4px;
                 }
             }
         }

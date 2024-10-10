@@ -126,3 +126,63 @@ interface animeCSV {
     produtores: string;
     distribuidores: string;
 }
+
+/* Formulário */
+interface camposForm {
+    malID?: boolean;
+    defaultTitle?: boolean;
+    tituloING?: boolean;
+    qntdEPS?: boolean;
+    estreiaID?: boolean;
+    terminoID?: boolean;
+    temporadaID?: boolean;
+    anoID?: boolean;
+    semanaID?: boolean;
+    horarioID?: boolean;
+    produtoresID?: boolean;
+    distribuidoresID?: boolean;
+    estudiosID?: boolean;
+    origemID?: boolean;
+    generosID?: boolean;
+    temasID?: boolean;
+    demografiasID?: boolean;
+    duracaoID?: boolean;
+    notaID?: boolean;
+    qntdAvalID?: boolean;
+    etariaID?: boolean;
+    rankID?: boolean;
+    popularidadeID?: boolean;
+    qntdMembrosID?: boolean;
+}
+
+interface filterForm {
+    fromInput?: string;
+    toInput?: string;
+    todosTempID?: boolean;
+    invernoID?: boolean;
+    primaveraID?: boolean;
+    veraoID?: boolean;
+    outonoID?: boolean;
+    todosTipoID?: boolean;
+    tvID?: boolean;
+    movieID?: boolean;
+    ovaID?: boolean;
+    onaID?: boolean;
+    musicID?: boolean;
+    todosStatusID?: boolean;
+    finalizadoID?: boolean;
+    exibicaoID?: boolean;
+    exibidoID?: boolean;
+    todosEtariaID?: boolean;
+    gID?: boolean;
+    pgID?: boolean;
+    pg13ID?: boolean;
+    r17ID?: boolean;
+    rID?: boolean;
+    rxID?: boolean;
+}
+
+interface formData {
+    campos: camposForm;
+    filtros: filterForm;
+}
