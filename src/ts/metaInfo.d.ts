@@ -128,7 +128,7 @@ interface animeCSV {
 }
 
 /* Formulário */
-interface camposForm {
+interface formData {
     malID?: boolean;
     defaultTitle?: boolean;
     tituloING?: boolean;
@@ -155,9 +155,11 @@ interface camposForm {
     qntdMembrosID?: boolean;
 }
 
-interface filterForm {
+interface formData {
     fromInput?: string;
     toInput?: string;
+    fromSlider?: string;
+    toSlider?:string;
     todosTempID?: boolean;
     invernoID?: boolean;
     primaveraID?: boolean;
@@ -182,7 +184,6 @@ interface filterForm {
     rxID?: boolean;
 }
 
-interface formData {
-    campos: camposForm;
-    filtros: filterForm;
+interface Window {
+    formData: any;
 }

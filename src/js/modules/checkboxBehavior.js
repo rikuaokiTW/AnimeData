@@ -110,6 +110,18 @@ export default function initCheckboxBehavior() {
             });
         }
         ;
+        function startCheck() {
+            filterCheckboxes.forEach(checkbox => {
+                if (isCheckbox(checkbox)) {
+                    if (checkbox.name === 'todos' && checkbox.checked) {
+                        checkedAll(checkbox);
+                    }
+                    ;
+                }
+                ;
+            });
+        }
+        ;
         function handleCheckboxBehavior(event) {
             checkedBgColor();
             checkedAll(event.target);
@@ -120,6 +132,8 @@ export default function initCheckboxBehavior() {
                 checkbox.addEventListener('click', handleCheckboxBehavior);
             }
         }));
+        checkedBgColor();
+        startCheck();
     }
 }
 //# sourceMappingURL=checkboxBehavior.js.map

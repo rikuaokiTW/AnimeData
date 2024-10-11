@@ -91,6 +91,16 @@ export default function initCheckboxBehavior() {
                 };
             });
         };
+
+        function startCheck() {
+            filterCheckboxes.forEach(checkbox => {
+                if(isCheckbox(checkbox)) {
+                    if(checkbox.name === 'todos' && checkbox.checked) {
+                        checkedAll(checkbox);
+                    };
+                };
+            });
+        };
         
         // RESPONSÁVEL POR EVOCAR AS FUNÇÕES DO COMPORTAMENTO DAS CHECKBOXES
         function handleCheckboxBehavior(event: Event) {
@@ -104,6 +114,8 @@ export default function initCheckboxBehavior() {
                     checkbox.addEventListener('click', handleCheckboxBehavior);
                 }
         }));
+        checkedBgColor();
+        startCheck();
     }
 }
 
