@@ -3,7 +3,7 @@ import csvData from "./CSVFile.js";
 
 function animeToCSV(data: animeData) {
     return {
-        titulo: data.titles[0].title,
+        tituloPadrao: data.titles[0].title,
         temporada: data.season,
         estudios: formatArray(data.studios),
         temas: formatArray(data.themes),
@@ -25,7 +25,7 @@ export default function writeCSVRow(data: animeData[]) {
         const anime: animeCSV = animeToCSV(item);
         if (anime.faixaEtaria?.includes('Children')) return;
 
-        const csvRow = `"${anime.titulo.replace(/"/g, '""')}";"${anime.temporada}";"${anime.estudios}";"${anime.temas}";"${anime.generos}";"${anime.estreia}";"${anime.transmissao}";"${anime.nota}";"${anime.qntdAvaliacoes}";"${anime.faixaEtaria}";"${anime.qntdMembros}";"${anime.favoritados}";"${anime.produtores}";"${anime.distribuidores}"`;
+        const csvRow = `"${anime.tituloPadrao!.replace(/"/g, '""')}";"${anime.temporada}";"${anime.estudios}";"${anime.temas}";"${anime.generos}";"${anime.estreia}";"${anime.transmissao}";"${anime.nota}";"${anime.qntdAvaliacoes}";"${anime.faixaEtaria}";"${anime.qntdMembros}";"${anime.favoritados}";"${anime.produtores}";"${anime.distribuidores}"`;
         csvData.push(csvRow);
     })
 }

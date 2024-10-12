@@ -208,6 +208,14 @@
                         </div>
                         <div>
                             <div>
+                                <input type="checkbox" name="favoritados" id="favoritadosID" value="favoritados">
+                                <span class="checkmark"></span>
+                                <label for="favoritadosID">Favoritados</label>
+                            </div>
+                            <img src="./src/assets/help.svg" alt="help button">
+                        </div>
+                        <div>
+                            <div>
                                 <input type="checkbox" name="qntd-membros" id="qntdMembrosID" value="qntd-membros">
                                 <span class="checkmark"></span>
                                 <label for="qntdMembrosID">Qntd Membros</label>
@@ -428,6 +436,14 @@
             </div>
         </div>
     </main>
+    <section class="error-modal-container">
+        <div class="modal">
+            <button class="fechar">X</button>
+            <div>
+                <p>Erro: <span class="error-message"></span></p>
+            </div>
+        </div>
+    </section>
     <script type="module" src="./src/js/script.js"></script>
 </body>
 </html>

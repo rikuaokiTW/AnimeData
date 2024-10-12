@@ -111,20 +111,32 @@ interface seasonInfo {
 }
 
 interface animeCSV {
-    titulo: string;
-    temporada: string;
-    estudios: string;
-    temas: string;
-    generos: string;
-    estreia: string;
-    transmissao: string;
-    nota: number | string;
-    qntdAvaliacoes: number | string;
-    faixaEtaria: string;
-    qntdMembros: string;
-    favoritados: number | string;
-    produtores: string;
-    distribuidores: string;
+    malID?: number;
+    tituloPadrao?: string;
+    tituloIngles?: string;
+    qntdEpisodios?: number | string;
+    termino?: string;
+    temporada?: string;
+    ano?: number | string;
+    diaSemana?: string;
+    horario?: string;
+    estudios?: string;
+    origem?: string;
+    temas?: string;
+    generos?: string;
+    estreia?: string;
+    demografias?: string;
+    duracao?: string;
+    transmissao?: string; /* REMOVER */
+    nota?: number | string;
+    qntdAvaliacoes?: number | string;
+    rank?: number;
+    faixaEtaria?: string;
+    qntdMembros?: string;
+    favoritados?: number | string;
+    popularidade?: number | string;
+    produtores?: string;
+    distribuidores?: string;
 }
 
 /* Formulário */
@@ -152,6 +164,7 @@ interface formData {
     etariaID?: boolean;
     rankID?: boolean;
     popularidadeID?: boolean;
+    favoritadosID?: boolean;
     qntdMembrosID?: boolean;
 }
 
@@ -186,4 +199,9 @@ interface formData {
 
 interface Window {
     formData: any;
+}
+
+/* CHECKBOX */
+interface checkbox {
+    [key: string]: boolean
 }
