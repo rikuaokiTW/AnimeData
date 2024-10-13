@@ -1,5 +1,5 @@
-import { isHTMLElement } from "./typeguards";
-export default function toggleErrorModal(message) {
+import { isHTMLElement } from "./typeguards.js";
+export default function showErrorModal(message) {
     const botaoFechar = document.querySelector(".fechar");
     const containerModal = document.querySelector(".error-modal-container");
     const errorMessage = document.querySelector(".error-message");
@@ -7,7 +7,10 @@ export default function toggleErrorModal(message) {
         function toggleModal() {
             if (isHTMLElement(containerModal) && isHTMLElement(botaoFechar)) {
                 containerModal.classList.toggle('ativo');
-                botaoFechar.removeEventListener('click', toggleModal);
+                if (!containerModal.classList.contains('ativo')) {
+                    botaoFechar.removeEventListener('click', toggleModal);
+                }
+                ;
             }
             ;
         }

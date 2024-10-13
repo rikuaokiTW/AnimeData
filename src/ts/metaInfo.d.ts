@@ -205,3 +205,45 @@ interface Window {
 interface checkbox {
     [key: string]: boolean
 }
+
+interface temporada {
+    todos: boolean;
+    winter: boolean;
+    spring: boolean;
+    summer: boolean;
+    fall: boolean;
+}
+
+interface tipo {
+    todos: boolean;
+    tv: boolean;
+    movie: boolean;
+    ova: boolean;
+    ona: boolean;
+    music: boolean;
+}
+
+interface status {
+    todos: boolean;
+    "Finished Airing": boolean;
+    "Currently Airing": boolean;
+    "Not yet aired": boolean;
+}
+
+interface etaria {
+    todos: boolean;
+    "G - All Ages": boolean;
+    "PG - Children": boolean;
+    "PG-13 - Teens 13 or older": boolean;
+    "R - 17+ (violence & profanity)": boolean;
+    "R+ - Mild Nudity": boolean;
+    "Rx - Hentai": boolean;
+}
+
+/* interface filters {
+    anos: number[];
+    temporada: temporada;
+    tipo: tipo;
+    status: status;
+    etaria: etaria;
+} */
