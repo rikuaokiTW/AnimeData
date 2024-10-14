@@ -114,10 +114,10 @@ interface animeCSV {
     malID?: number;
     tituloPadrao?: string;
     tituloIngles?: string;
-    qntdEpisodios?: number | string;
+    qntdEpisodios?: string;
     termino?: string;
     temporada?: string;
-    ano?: number | string;
+    ano?: string;
     diaSemana?: string;
     horario?: string;
     estudios?: string;
@@ -128,13 +128,13 @@ interface animeCSV {
     demografias?: string;
     duracao?: string;
     transmissao?: string; /* REMOVER */
-    nota?: number | string;
-    qntdAvaliacoes?: number | string;
-    rank?: number;
+    nota?: string;
+    qntdAvaliacoes?: string;
+    rank?: string;
     faixaEtaria?: string;
     qntdMembros?: string;
-    favoritados?: number | string;
-    popularidade?: number | string;
+    favoritados?: string;
+    popularidade?: string;
     produtores?: string;
     distribuidores?: string;
 }
@@ -201,10 +201,7 @@ interface Window {
     formData: any;
 }
 
-/* CHECKBOX */
-interface checkbox {
-    [key: string]: boolean
-}
+/* FORM ITEMS */
 
 interface temporada {
     todos: boolean;
@@ -240,10 +237,38 @@ interface etaria {
     "Rx - Hentai": boolean;
 }
 
-/* interface filters {
+interface filters {
     anos: number[];
-    temporada: temporada;
-    tipo: tipo;
+    temporadas: temporada;
+    tipos: tipo;
     status: status;
     etaria: etaria;
-} */
+}
+
+interface campos {
+    malID: boolean;
+    defaultTitle: boolean;
+    tituloING: boolean;
+    qntdEPS: boolean;
+    estreia: boolean;
+    termino: boolean;
+    temporada: boolean;
+    ano: boolean;
+    semana: boolean;
+    horario: boolean;
+    produtores: boolean;
+    distribuidores: boolean;
+    estudios: boolean;
+    origem: boolean;
+    generos: boolean;
+    temas: boolean;
+    demografias: boolean;
+    duracao: boolean;
+    nota: boolean;
+    qntdAval: boolean;
+    etaria: boolean;
+    rank: boolean;
+    popularidade: boolean;
+    favoritados: boolean;
+    qntdMembros: boolean;
+}

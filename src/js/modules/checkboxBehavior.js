@@ -48,15 +48,17 @@ export default function initCheckboxBehavior() {
                         }
                         ;
                         if (checkboxes && checkbox.checked == false) {
-                            for (let i = 1; i < checkboxes?.length; ++i) {
-                                let nextCheckbox = checkboxes[i].children[0];
-                                if (isCheckbox(nextCheckbox)) {
-                                    nextCheckbox.checked = false;
-                                    checkedBgColor();
+                            if (target.id === checkbox.id) {
+                                for (let i = 1; i < checkboxes?.length; ++i) {
+                                    let nextCheckbox = checkboxes[i].children[0];
+                                    if (isCheckbox(nextCheckbox)) {
+                                        nextCheckbox.checked = false;
+                                        checkedBgColor();
+                                    }
+                                    ;
                                 }
                                 ;
                             }
-                            ;
                         }
                         ;
                     }

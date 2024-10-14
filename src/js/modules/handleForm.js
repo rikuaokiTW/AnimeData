@@ -1,19 +1,43 @@
 import showErrorModal from "./modal.js";
-import { isCheckbox, isInput } from "./typeguards.js";
+import { isCheckbox, isFaixaEtaria, isInput, isStatus, isTemporada, isTipo } from "./typeguards.js";
 export function getCampos() {
     const formFields = document.querySelectorAll(".fields [type='checkbox']");
     try {
         if (formFields) {
-            const fields = [];
+            let fields = {
+                malID: false,
+                defaultTitle: false,
+                tituloING: false,
+                qntdEPS: false,
+                estreia: false,
+                termino: false,
+                temporada: false,
+                ano: false,
+                semana: false,
+                horario: false,
+                produtores: false,
+                distribuidores: false,
+                estudios: false,
+                origem: false,
+                generos: false,
+                temas: false,
+                demografias: false,
+                duracao: false,
+                nota: false,
+                qntdAval: false,
+                etaria: false,
+                rank: false,
+                popularidade: false,
+                favoritados: false,
+                qntdMembros: false
+            };
             formFields.forEach(checkbox => {
                 if (isCheckbox(checkbox)) {
-                    let obj = {};
-                    obj[checkbox.id] = checkbox.checked;
-                    fields.push(obj);
+                    fields[checkbox.id] = checkbox.checked;
                 }
                 ;
             });
-            if (fields.every(field => Object.values(field)[0] === false)) {
+            if (Object.values(fields).every(value => value === false)) {
                 throw new Error("É necessário que pelo menos um dos campos esteja marcado.");
             }
             return fields;
@@ -321,6 +345,36 @@ export function getFaixaEtaria() {
         }
         ;
         return [];
+    }
+    ;
+}
+;
+export function getFiltros() {
+    let anos = getAnos();
+    let temporadas = getTemporadas();
+    let tipos = getTipos();
+    let status = getStatus();
+    let etaria = getFaixaEtaria();
+    if (Object.keys(anos).length &&
+        Object.keys(temporadas).length &&
+        isTemporada(temporadas) &&
+        Object.keys(tipos).length &&
+        isTipo(tipos) &&
+        Object.keys(status).length &&
+        isStatus(status) &&
+        Object.keys(etaria).length &&
+        isFaixaEtaria(etaria)) {
+        let filtros = {
+            anos: anos,
+            temporadas: temporadas,
+            tipos: tipos,
+            status: status,
+            etaria: etaria,
+        };
+        return filtros;
+    }
+    else {
+        return {};
     }
     ;
 }
