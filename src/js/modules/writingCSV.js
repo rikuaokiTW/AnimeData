@@ -147,7 +147,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         columnHeaders.push("Terminou em");
                                     }
                                     ;
-                                    if (anime.season) {
+                                    if (anime.aired.to) {
                                         animeCSV.termino = formatDate(anime.aired.to);
                                     }
                                     else {
