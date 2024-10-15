@@ -15,10 +15,14 @@ body {
         $bkgd-blue 270deg 360deg
     );
     font-family: 'Verdana', 'sans-serif';
+    @include d(m) {}
 }
 
 header {
-    margin-bottom: 54px;
+    margin-bottom: 3.375rem;
+    @include d(m) {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .emphasis {

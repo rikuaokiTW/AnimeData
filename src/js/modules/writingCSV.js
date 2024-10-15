@@ -1,5 +1,3 @@
-import { formatArray } from "./normalizeData.js";
-import csvData from "./CSVFile.js";
 import csvDados from "./CSV.js";
 export function createAnimeCSV(data, campos, filtros) {
     let columnHeaders = [];
@@ -97,12 +95,14 @@ export function createAnimeCSV(data, campos, filtros) {
                                     }
                                     ;
                                     animeCSV.malID = anime.mal_id;
+                                    break;
                                 case 'defaultTitle':
                                     if (!columnHeaders.includes("Título Padrão")) {
                                         columnHeaders.push("Título Padrão");
                                     }
                                     ;
                                     animeCSV.tituloPadrao = formatTitle(anime.titles[0].title);
+                                    break;
                                 case 'tituloING':
                                     if (!columnHeaders.includes("Título Inglês")) {
                                         columnHeaders.push("Título Inglês");
@@ -117,6 +117,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                     if (!Object.keys(animeCSV).includes('tituloIngles')) {
                                         animeCSV.tituloIngles = 'N/A';
                                     }
+                                    break;
                                 case 'qntdEPS':
                                     if (!columnHeaders.includes("Qntd Episódios")) {
                                         columnHeaders.push("Qntd Episódios");
@@ -128,6 +129,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                     else {
                                         animeCSV.qntdEpisodios = 'N/A';
                                     }
+                                    break;
                                 case 'estreia':
                                     if (!columnHeaders.includes("Estreou em")) {
                                         columnHeaders.push("Estreou em");
@@ -139,6 +141,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                     else {
                                         animeCSV.estreia = 'N/A';
                                     }
+                                    break;
                                 case 'termino':
                                     if (!columnHeaders.includes("Terminou em")) {
                                         columnHeaders.push("Terminou em");
@@ -150,6 +153,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                     else {
                                         animeCSV.termino = 'N/A';
                                     }
+                                    break;
                                 case 'temporada':
                                     if (!columnHeaders.includes("Temporada")) {
                                         columnHeaders.push("Temporada");
@@ -161,6 +165,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                     else {
                                         animeCSV.temporada = 'N/A';
                                     }
+                                    break;
                                 case 'ano':
                                     if (!columnHeaders.includes("Ano")) {
                                         columnHeaders.push("Ano");
@@ -173,6 +178,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.ano = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'semana':
                                     if (!columnHeaders.includes("Dia da Semana")) {
                                         columnHeaders.push("Dia da Semana");
@@ -185,6 +191,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.diaSemana = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'horario':
                                     if (!columnHeaders.includes("Horário")) {
                                         columnHeaders.push("Horário");
@@ -197,6 +204,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.horario = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'produtores':
                                     if (!columnHeaders.includes("Produtores")) {
                                         columnHeaders.push("Produtores");
@@ -209,6 +217,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.produtores = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'distribuidores':
                                     if (!columnHeaders.includes("Distribuidores")) {
                                         columnHeaders.push("Distribuidores");
@@ -221,6 +230,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.distribuidores = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'estudios':
                                     if (!columnHeaders.includes("Estúdios")) {
                                         columnHeaders.push("Estúdios");
@@ -233,6 +243,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.estudios = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'origem':
                                     if (!columnHeaders.includes("Origem")) {
                                         columnHeaders.push("Origem");
@@ -245,6 +256,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.origem = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'generos':
                                     if (!columnHeaders.includes("Gêneros")) {
                                         columnHeaders.push("Gêneros");
@@ -257,6 +269,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.generos = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'temas':
                                     if (!columnHeaders.includes("Temas")) {
                                         columnHeaders.push("Temas");
@@ -269,6 +282,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.temas = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'demografias':
                                     if (!columnHeaders.includes("Demografias")) {
                                         columnHeaders.push("Demografias");
@@ -281,6 +295,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.demografias = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'duracao':
                                     if (!columnHeaders.includes("Duração")) {
                                         columnHeaders.push("Duração");
@@ -293,6 +308,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.duracao = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'nota':
                                     if (!columnHeaders.includes("Nota")) {
                                         columnHeaders.push("Nota");
@@ -305,6 +321,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.nota = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'qntdAval':
                                     if (!columnHeaders.includes("Qntd Avaliações")) {
                                         columnHeaders.push("Qntd Avaliações");
@@ -317,6 +334,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.qntdAvaliacoes = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'etaria':
                                     if (!columnHeaders.includes("Faixa-Etária")) {
                                         columnHeaders.push("Faixa-Etária");
@@ -329,6 +347,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.faixaEtaria = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'rank':
                                     if (!columnHeaders.includes("Rank")) {
                                         columnHeaders.push("Rank");
@@ -341,6 +360,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.rank = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'popularidade':
                                     if (!columnHeaders.includes("Popularidade")) {
                                         columnHeaders.push("Popularidade");
@@ -353,6 +373,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.popularidade = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'favoritados':
                                     if (!columnHeaders.includes("Favoritados")) {
                                         columnHeaders.push("Favoritados");
@@ -365,6 +386,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.favoritados = 'N/A';
                                     }
                                     ;
+                                    break;
                                 case 'qntdMembros':
                                     if (!columnHeaders.includes("Qntd Membros")) {
                                         columnHeaders.push("Qntd Membros");
@@ -377,6 +399,7 @@ export function createAnimeCSV(data, campos, filtros) {
                                         animeCSV.qntdMembros = 'N/A';
                                     }
                                     ;
+                                    break;
                                 default:
                                     break;
                             }
@@ -386,7 +409,6 @@ export function createAnimeCSV(data, campos, filtros) {
                     }
                     ;
                     if (!csvDados.length) {
-                        console.log(columnHeaders);
                         csvDados.push(columnHeaders.join(';'));
                     }
                     ;
@@ -401,31 +423,4 @@ export function createAnimeCSV(data, campos, filtros) {
     ;
 }
 ;
-function animeToCSV(data) {
-    return {
-        tituloPadrao: data.titles[0].title,
-        temporada: data.season,
-        estudios: formatArray(data.studios),
-        temas: formatArray(data.themes),
-        generos: formatArray(data.genres),
-        estreia: data.aired.from.slice(0, 10).split('-').reverse().join('/'),
-        transmissao: data.broadcast.string ? data.broadcast.string : 'N/A',
-        nota: data.score ? String(data.score) : 'N/A',
-        qntdAvaliacoes: data.scored_by ? String(data.scored_by.toLocaleString()) : 'N/A',
-        faixaEtaria: data.rating,
-        qntdMembros: data.members.toLocaleString(),
-        favoritados: String(data.favorites.toLocaleString()),
-        produtores: formatArray(data.producers),
-        distribuidores: formatArray(data.licensors),
-    };
-}
-export function writeCSVRow(data) {
-    data.forEach((item) => {
-        const anime = animeToCSV(item);
-        if (anime.faixaEtaria?.includes('Children'))
-            return;
-        const csvRow = `"${anime.tituloPadrao.replace(/"/g, '""')}";"${anime.temporada}";"${anime.estudios}";"${anime.temas}";"${anime.generos}";"${anime.estreia}";"${anime.transmissao}";"${anime.nota}";"${anime.qntdAvaliacoes}";"${anime.faixaEtaria}";"${anime.qntdMembros}";"${anime.favoritados}";"${anime.produtores}";"${anime.distribuidores}"`;
-        csvData.push(csvRow);
-    });
-}
 //# sourceMappingURL=writingCSV.js.map

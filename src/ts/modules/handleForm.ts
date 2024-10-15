@@ -35,7 +35,75 @@ export function getCampos() {
             };
             formFields.forEach(checkbox => {
                 if(isCheckbox(checkbox)) {
-                    fields[checkbox.id as keyof campos] = checkbox.checked;
+                    switch (checkbox.id) {
+                        case "estreiaID":
+                            fields["estreia"] = checkbox.checked;
+                            break;
+                        case "terminoID":
+                            fields["termino"] = checkbox.checked;
+                            break;
+                        case "temporadaID":
+                            fields["temporada"] = checkbox.checked;
+                            break;
+                        case "anoID":
+                            fields["ano"] = checkbox.checked;
+                            break;
+                        case "semanaID":
+                            fields["semana"] = checkbox.checked;
+                            break;
+                        case "horarioID":
+                            fields["horario"] = checkbox.checked;
+                            break;
+                        case "produtoresID":
+                            fields["produtores"] = checkbox.checked;
+                            break;
+                        case "distribuidoresID":
+                            fields["distribuidores"] = checkbox.checked;
+                            break;
+                        case "estudiosID":
+                            fields["estudios"] = checkbox.checked;
+                            break;
+                        case "origemID":
+                            fields["origem"] = checkbox.checked;
+                            break;
+                        case "generosID":
+                            fields["generos"] = checkbox.checked;
+                            break;
+                        case "temasID":
+                            fields["temas"] = checkbox.checked;
+                            break;
+                        case "demografiasID":
+                            fields["demografias"] = checkbox.checked;
+                            break;
+                        case "duracaoID":
+                            fields["duracao"] = checkbox.checked;
+                            break;
+                        case "notaID":
+                            fields["nota"] = checkbox.checked;
+                            break;
+                        case "qntdAvalID":
+                            fields["qntdAval"] = checkbox.checked;
+                            break;
+                        case "etariaID":
+                            fields["etaria"] = checkbox.checked;
+                            break;
+                        case "rankID":
+                            fields["rank"] = checkbox.checked;
+                            break;
+                        case "popularidadeID":
+                            fields["popularidade"] = checkbox.checked;
+                            break;
+                        case "favoritadosID":
+                            fields["favoritados"] = checkbox.checked;
+                            break;
+                        case "qntdMembrosID":
+                            fields["qntdMembros"] = checkbox.checked;
+                            break;
+                    
+                        default:
+                            fields[checkbox.id as keyof campos] = checkbox.checked;
+                            break;
+                    };
                 };
             });
             if(Object.values(fields).every(value => value === false)) {

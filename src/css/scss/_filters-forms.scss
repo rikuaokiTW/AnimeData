@@ -4,6 +4,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
+    @include d(m) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include d(s) {
+        grid-template-columns: 1fr;
+    }
     div {
         @include flex-jstart;
         padding: 12px 8px;

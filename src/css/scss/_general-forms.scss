@@ -1,5 +1,11 @@
 /* Configurações de títulos dos formulários */
 
+.filters {
+    @include d(s) {
+        margin-top: 20px;
+    }
+}
+
 .field-title {
     background-color: $white;
     padding: 13px 16px;

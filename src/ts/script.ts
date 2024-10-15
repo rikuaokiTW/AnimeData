@@ -1,14 +1,11 @@
 import initDateMaintenance from "./modules/dateMaintenance.js";
 import initCheckboxBehavior from "./modules/checkboxBehavior.js";
 import initRangeSlider from "./modules/rangeSliders.js";
-import executeFetch from "./modules/executeFetch.js";
 import initLocalStorage from "./modules/localStorage.js";
-import toggleErrorModal from "./modules/modal.js";
-import { getFaixaEtaria, getFiltros } from "./modules/handleForm.js";
+import { initButton } from "./modules/button.js";
 
 initLocalStorage();
 initDateMaintenance();
 initCheckboxBehavior();
 initRangeSlider();
-
-document.querySelector("button")!.addEventListener('click', executeFetch);
+initButton();

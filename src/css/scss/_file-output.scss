@@ -5,14 +5,23 @@
         @include flex-center;
         position: relative;
         .file-placeholder {
+            //display: none;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: max-content;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
             color: rgba(23, 41, 82, .4);
+            @include d(m) {
+                width: 100%;
+                text-align: center;
+            }
+            @include d(s) {
+                width: 100%;
+                text-align: center;
+            }
         }
         .file-loader {
             @include flex-center-column;

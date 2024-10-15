@@ -4,7 +4,9 @@ import { switchToFIle, switchToLoader } from './switchingElements.js';
 import { getCampos, getFiltros } from './handleForm.js';
 import { isCampos, isFilters } from './typeguards.js';
 import csvDados from './CSV.js';
+import { toggleButton } from './button.js';
 export default async function executeFetch() {
+    toggleButton();
     const campos = getCampos();
     const filters = getFiltros();
     const delay = (ms) => new Promise(res => setTimeout(res, ms));
@@ -20,8 +22,19 @@ export default async function executeFetch() {
                 for (const [season, value] of Object.entries(seasons)) {
                     if (season != 'todos' && value) {
                         loadMessage(String(year), season);
-                        await fetchSeason(year, season, campos, filters);
+                        let data = await fetchSeason(year, season, campos, filters);
                         await delay(2000);
+                        if (Object.keys(data).length && data.pagination) {
+                            if (data.pagination.last_visible_page > 1) {
+                                for (let i = 2; i <= data.pagination.last_visible_page; i++) {
+                                    await fetchSeason(year, season, campos, filters, i);
+                                    await delay(2000);
+                                }
+                                ;
+                            }
+                            ;
+                        }
+                        ;
                     }
                     ;
                 }
@@ -38,6 +51,7 @@ export default async function executeFetch() {
                         setFileName(name);
                     }
                     switchToFIle();
+                    toggleButton();
                 }
                 ;
             }
@@ -50,6 +64,9 @@ export default async function executeFetch() {
             ;
         }
         ;
+    }
+    else {
+        toggleButton();
     }
     ;
 }

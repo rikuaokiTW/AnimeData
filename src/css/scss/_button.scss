@@ -9,5 +9,21 @@
         font-size: 20px;
         font-weight: bold;
         color: $white;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($color: $bkgd-blue, $alpha: 0.9);
+        }
+        &:active {
+            padding: 10px 50px;
+            margin: 2px;
+            color: rgba($color: $white, $alpha: 0.8)
+        }
+        &.disabled {
+            background-color: rgba($color: $bkgd-blue, $alpha: 0.6);
+            color: rgba($color: $white, $alpha: 0.6);
+            &:hover {
+                cursor: default;
+            }
+        }
     }
 }

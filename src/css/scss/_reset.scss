@@ -6,8 +6,14 @@
 
 html {
     height: 100%;
+    @include d(s) {
+        min-height: fit-content;
+    }
 }
 
 body {
     min-height: 100%;
+    @include d(s) {
+        min-height: fit-content;
+    }
 }

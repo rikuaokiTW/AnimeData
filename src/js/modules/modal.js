@@ -3,12 +3,9 @@ export default function showErrorModal(message) {
     const botaoFechar = document.querySelector(".fechar");
     const containerModal = document.querySelector(".error-modal-container");
     const errorMessage = document.querySelector(".error-message");
-    console.log('sim 1 error modal');
     if (botaoFechar && containerModal) {
-        console.log('sim 2 error modal');
         function toggleModal() {
             if (isHTMLElement(containerModal) && isHTMLElement(botaoFechar)) {
-                console.log('sim 4 error modal');
                 containerModal.classList.toggle('ativo');
                 if (!containerModal.classList.contains('ativo')) {
                     botaoFechar.removeEventListener('click', toggleModal);
@@ -27,7 +24,6 @@ export default function showErrorModal(message) {
         }
         ;
         function showErrorMessage() {
-            console.log('sim 3 error modal');
             if (isHTMLElement(errorMessage)) {
                 errorMessage.textContent = message;
             }

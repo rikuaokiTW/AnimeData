@@ -1,28 +1,10 @@
+import { isCheckbox } from "./typeguards.js";
+
 export default function initLocalStorage() {
+    const filterCheckboxes = document.querySelectorAll('.filters [type="checkbox"]');
     window.formData = {};
 
-    if(true) {
-        /* function isKeyofCampos<Chave extends keyof formData>(
-            value: Chave
-        ): formData[Chave] | null {
-            return true;
-        };
-
-        function checkInterface<Interface>(
-            obj: unknown,
-            key: keyof Interface
-        ): obj is Interface  {
-            if(
-                obj &&
-                typeof obj === 'object' &&
-                key in obj
-            ) {
-                return true;
-            } else {
-                return false;
-            };
-        }; */
-
+    if(true && filterCheckboxes) {
         function validJSON(str: string) {
             try {
                 JSON.parse(str);
@@ -52,6 +34,15 @@ export default function initLocalStorage() {
 
         function handleInput({ target }: Event) {
             if (target instanceof HTMLInputElement && target.type == 'checkbox') {
+                let checkbox = target.parentElement?.parentElement?.children[0].children[0];
+                if(checkbox && isCheckbox(checkbox)) {
+                    if(checkbox.id.includes('todos')) {
+                        if(window.formData[checkbox.id] != checkbox.checked) {
+                            window.formData[checkbox.id] = checkbox.checked;
+                            localStorage.setItem('formData', JSON.stringify(window.formData));
+                        };
+                    };
+                };
                 window.formData[target.id] = target.checked;
                 localStorage.setItem('formData', JSON.stringify(window.formData));
             };
